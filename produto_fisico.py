@@ -8,6 +8,9 @@ class ProdutoFisico(Produto):
     def __repr__(self):
         return f"Produto: {self.nome} - Preço: R${self.preco:.2f} - Peso: {self.peso}KG"
     
+    def calcular_frete(self):
+        return self.peso * 5
+    
     @property
     def peso(self):
         return self._peso

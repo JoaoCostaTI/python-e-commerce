@@ -7,6 +7,9 @@ class ProdutoDigital(Produto):
     
     def __repr__(self):
         return f"Produto: {self.nome} - Preço: R${self.preco:.2f} - Peso: {self.tamanho} MB"
+    
+    def calcular_frete(self):
+        return 0
 
     @property
     def tamanho(self):

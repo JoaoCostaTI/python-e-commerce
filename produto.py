@@ -1,7 +1,8 @@
 from functools import total_ordering
+from abc import ABC, abstractmethod
 
 @total_ordering
-class Produto():
+class Produto(ABC):
     def __init__(self, nome, preco):
         self.nome = nome
         self.preco = preco
@@ -9,6 +10,10 @@ class Produto():
     def __repr__(self):
         return f"Produto: {self.nome} - Preço: R${self.preco:.2f}\n"
     
+    @abstractmethod
+    def calcular_frete(self):
+        pass
+
     #Protegendo Preço
     @property
     def preco(self):
