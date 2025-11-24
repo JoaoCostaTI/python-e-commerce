@@ -59,3 +59,6 @@ class BancoDeDados:
         produtos = cursor.fetchall()
         for p in produtos:
             print(f'ID: {p[0]}\nNome: {p[1]}\nPreço: R${p[2]}\nTipo: {p[3]}\nPeso: {p[4]}\nTamanho: {p[5]}')
+
+
+            
